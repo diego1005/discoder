@@ -1,0 +1,25 @@
+<%- include("./partials/head.ejs") %>
+    </head>
+
+    <body>
+        <%- include("./partials/header.ejs") %>
+            <main class="main">
+                <form action="/code" method="POST">
+                    <div class="code-box">
+                            <% for (let i=0; i<len; i++ ) { %>
+                                <div class="char-box">
+                                    <label><%= i+1 %></label>
+                                    <input type="text" name="<%= `${i+1}_box` %>" value="<%= (locals?.result && result[i] != null) ? result[i] : '' %> ">
+                                </div>
+                                <% } %>
+                    </div>
+                    <div class="btn-box">
+                        <input class="btn" type="submit" value=">> CODE >>">
+                    </div>
+                    <%= code %> 
+                </form>
+            </main>
+
+    </body>
+
+    </html>
