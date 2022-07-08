@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 
 const indexRouter = require("./routes/index.routes");
+const codeRouter = require("./routes/code.routes");
+const userRouter = require("./routes/user.routes");
 
 // Settings
 let port = process.env.PORT || 3000;
@@ -15,6 +17,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 //-Routes
 app.use("/", indexRouter);
+app.use("/code", codeRouter);
+app.use("/user", userRouter);
 
 
 //Server

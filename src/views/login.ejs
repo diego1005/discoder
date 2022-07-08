@@ -1,8 +1,33 @@
 <%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/login.css">
     </head>
 
     <body>
-        <h1>Este es el Login</h1>
+        <div class="back">
+            <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <form class="form-control" action="/user/login" method="POST">
+            <div class="control">
+                <label>Email o Usuario</label>
+                <input type="text" name="username">
+            </div>
+            <div class="control">
+                <label>Contraseña</label>
+                <input type="password" name="password">
+            </div>
+            <div class="remember-forget">
+                <div class="remember">
+                    <input id="rem" type="checkbox" name="remember">
+                    <label>Recuerdame</label>
+                </div>
+                <div>
+                    <a href="/user/forget">Recuperar contraseña</a>
+                </div>
+            </div>
+            <div class="btn-control">
+                <input type="submit" value="Iniciar">
+            </div>
+        </form>
     </body>
 
     </html>

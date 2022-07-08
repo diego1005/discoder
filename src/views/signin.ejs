@@ -1,8 +1,40 @@
 <%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/signin.css">
     </head>
 
     <body>
-        <h1>Este es el Sign In</h1>
+        <div class="back">
+            <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <form class="form-control" action="/user/login" method="POST">
+            <div class="control">
+                <label>Nombre</label>
+                <input type="text" name="username">
+            </div>
+            <div class="control">
+                <label>Apellido</label>
+                <input type="text" name="username">
+            </div>
+            <div class="control">
+                <label>Usuario</label>
+                <input type="text" name="username">
+            </div>
+            <div class="control">
+                <label>E-mail</label>
+                <input type="email" name="username">
+            </div>
+            <div class="control">
+                <label>Contraseña</label>
+                <input type="password" name="username">
+            </div>
+            <div class="control">
+                <label>Repetir Contraseña</label>
+                <input type="password" name="password">
+            </div>
+            <div class="btn-control">
+                <input type="submit" value="Registrarse">
+            </div>
+        </form>
     </body>
 
     </html>
