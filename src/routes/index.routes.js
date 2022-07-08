@@ -3,8 +3,7 @@ const router = Router();
 
 const indexController = require("../controller/indexController");
 
-//Home view
+//Home routes
 router.get("/", indexController.home);
-router.post("/code", indexController.checkCode);
 
 module.exports = router;

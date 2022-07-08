@@ -8,6 +8,11 @@
     margin: 2% 0;
 }
 
+.main-header a {
+    text-decoration: none;
+    color: black;
+}
+
 .code-box {
     display: flex;
     justify-content: space-between;
@@ -34,6 +39,14 @@
     border-radius: 10px;
 }
 
+.char-ok input{
+    background-color: green;
+}
+
+.char-ok input:disabled {
+    color: white;
+}
+
 .btn-box {
     width: 50%;
     text-align: center;
@@ -45,4 +58,9 @@
     padding: 2%;
     border-radius: 10px;
     border: none;
+}
+
+.code {
+    margin-top: 5%;
+    text-align: center;
 }

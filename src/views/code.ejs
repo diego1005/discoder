@@ -1,0 +1,28 @@
+<%- include("./partials/head.ejs") %>
+    </head>
+
+    <body>
+        <header class="main-header">
+            <h2><a href="/">ADIVINA EL CODIGO</a></h2>
+        </header>
+        <main class="main">
+            <form action="/code" method="POST">
+                <div class="code-box">
+                    <% for (let i=0; i<len; i++ ) { %>
+                        <div class="<%= (locals?.result && result[i] != null) ? 'char-box char-ok' : 'char-box' %>">
+                            <label><%= i+1 %></label>
+                            <input type="text" name="<%= `${i+1}_box` %>"
+                                value="<%= (locals?.result && result[i] != null) ? result[i] : '' %>" <%=(locals?.result
+                                && result[i] !=null) ? 'disabled' : '' %> >
+                        </div>
+                        <% } %>
+                </div>
+                <div class="btn-box">
+                    <input class="btn" type="submit" value=">> CODE >>">
+                </div>
+            </form>
+        </main>
+
+    </body>
+
+    </html>
