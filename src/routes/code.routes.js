@@ -4,7 +4,7 @@ const router = Router();
 const codeController = require("../controller/codeController");
 
 //Code routes
-router.get("/code", codeController.begin);
-router.post("/code", codeController.checkCode);
+router.get("/", codeController.begin);
+router.post("/", codeController.checkCode);
 
 module.exports = router;
